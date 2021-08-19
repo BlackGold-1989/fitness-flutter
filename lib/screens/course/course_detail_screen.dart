@@ -94,7 +94,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
             child: Icon(Icons.arrow_back_ios),
             onTap: () => Navigator.of(context).pop(),
           ),
-          title: widget.course.title,
+          title: widget.course.title ??'My Course',
           actions: [
             courseStatus == 0
                 ? IconButton(icon: Icon(Icons.bar_chart), onPressed: () {})

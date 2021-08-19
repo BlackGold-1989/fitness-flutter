@@ -1,0 +1,6 @@
+framework module flutter_inapp_purchase {
+  umbrella header "flutter_inapp_purchase-umbrella.h"
+
+  export *
+  module * { export * }
+}

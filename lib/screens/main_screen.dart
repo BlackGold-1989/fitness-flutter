@@ -104,6 +104,10 @@ class _MainScreenState extends State<MainScreen> {
           onAlarm: () =>
               NavigatorService(context).pushToWidget(screen: AlarmScreen()),
           onMyCourse: (courseId) async {
+            if (currentCourse == null) {
+
+              return;
+            }
             NavigatorService(context).pushToWidget(
                 screen: CourseDetailScreen(
               course: currentCourse,

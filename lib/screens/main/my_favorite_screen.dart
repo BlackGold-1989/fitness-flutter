@@ -16,6 +16,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyFavoriteScreen extends StatefulWidget {
   final dynamic userData;
+
   MyFavoriteScreen({Key key, this.userData}) : super(key: key);
 
   @override
@@ -90,7 +91,9 @@ class _MyFavoriteScreenState extends State<MyFavoriteScreen> {
                       vertical: offsetBase, horizontal: offsetSm),
                   itemCount: courses.length,
                   itemBuilder: (context, i) {
-                    return InkWell(
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: offsetBase),
+                      child: InkWell(
                         onTap: () {
                           if (widget.userData['type'] == 'FREE' &&
                               courses[i].type == 'PREMIUM') {
@@ -160,8 +163,12 @@ class _MyFavoriteScreenState extends State<MyFavoriteScreen> {
                             ));
                           }
                         },
-                        child: courses[i].getListWidget(context,
-                            favorite: () => onFavorite(courses[i])));
+                        child: courses[i].getListWidget(
+                          context,
+                          favorite: () => onFavorite(courses[i]),
+                        ),
+                      ),
+                    );
                   })),
     );
   }
