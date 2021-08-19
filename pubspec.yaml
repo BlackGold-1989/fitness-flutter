@@ -1,0 +1,60 @@
+name: fitness
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.3
+
+  google_fonts: ^2.1.0
+  unicons: ^2.0.1
+  shared_preferences: ^2.0.6
+  focused_menu: ^1.0.5
+  http: ^0.13.3
+  cached_network_image: ^3.0.0
+  flutter_svg: ^0.22.0
+  video_thumbnail: ^0.3.3
+  carousel_slider: ^4.0.0-nullsafety.0
+  circular_countdown: ^2.1.0
+  timer_controller: ^0.1.0
+
+  chewie: ^1.0.0
+  video_player: ^2.1.5
+
+  # flutter_local_notifications: ^6.0.0
+  google_sign_in: ^5.0.4
+  sign_in_with_apple: ^3.0.0
+  jwt_decode: ^0.3.1
+
+  in_app_review: ^2.0.2
+  flutter_inapp_purchase: ^5.0.1
+
+  android_alarm_manager: ^2.0.2
+
+  intl: ^0.17.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_intl:
+  main_locale: en_US
+  enabled: true
